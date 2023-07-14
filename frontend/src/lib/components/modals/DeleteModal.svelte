@@ -32,7 +32,7 @@
         {$t('delete_modal.delete', { entityName })}
       {/if}
     </button>
-    <button class="btn" disabled={closing} on:click={() => modal.cancelModal()}>
+    <button class="btn btn-nuetral" disabled={closing} on:click={() => modal.cancelModal()}>
       {#if isRemoveDialog}
         {$t('delete_modal.dont_remove')}
       {:else}

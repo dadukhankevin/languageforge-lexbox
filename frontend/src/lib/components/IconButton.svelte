@@ -5,8 +5,11 @@
   export let ghost = false;
 </script>
 
-<button {disabled} on:click class="btn btn-square {ghost ? 'btn-ghost' : 'btn-outline'}" class:loading>
+<button {disabled} on:click class="btn btn-square {ghost ? 'btn-ghost' : 'btn-outline'}">
   {#if !loading}
     <span class="{icon} text-lg" />
+  {:else}
+  <span class:loading></span>
   {/if}
+
 </button>

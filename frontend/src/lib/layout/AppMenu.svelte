@@ -14,7 +14,7 @@
   <div class="drawer-overlay" />
 
   <!-- https://daisyui.com/components/menu  -->
-  <ul class="menu bg-base-100 min-w-[33%]">
+  <ul class="menu bg-base-100 min-w-[33%] h-screen">
     <header class="prose flex flex-col items-end p-4 mb-4">
       <h2 class="mb-0">{user.name}</h2>
       <span class="font-light">{user.email}</span>
@@ -55,9 +55,15 @@
     <div class="divider" />
     <div class="grow"/>
     <li class="items-end pb-2 gap-1">
+      <span class="p-0">
       <Badge>Client Version: {APP_VERSION}</Badge>
+      </span>
+      <span class="p-0">
       <Badge>Server Version: {serverVersion}</Badge>
+      </span>
+      <span class="p-0">
       <Badge>API Version: {apiVersion}</Badge>
+      </span>
     </li>
   </ul>
 </div>
