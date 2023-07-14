@@ -71,9 +71,9 @@
 
       <div class="divider" />
 
-      <table class="table">
+      <table class="table w-auto">
         <thead>
-          <tr>
+          <tr class="bg-base-200">
             <th>{$t('admin_dashboard.column_name')}</th>
             <th>{$t('admin_dashboard.column_code')}</th>
             <th>{$t('admin_dashboard.column_users')}</th>
@@ -121,9 +121,9 @@
       />
 
       <div class="divider" />
-      <table class="table">
+      <table class="table w-auto">
         <thead>
-          <tr>
+          <tr class="bg-base-200">
             <th>{$t('admin_dashboard.column_name')}<span class="i-mdi-sort-ascending text-xl align-[-5px] ml-1" /></th>
             <th>{$t('admin_dashboard.column_email')}</th>
             <th>{$t('admin_dashboard.column_role')}</th>

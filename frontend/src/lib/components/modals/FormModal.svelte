@@ -45,8 +45,12 @@
   <FormError error={$message} right />
   <slot name="extraActions" slot="extraActions" />
   <svelte:fragment slot="actions" let:closing>
-    <button type="submit" form="modalForm" class="btn btn-primary" class:loading={closing}>
-      <slot name="submitText" />
+    <button type="submit" form="modalForm" class="btn btn-primary">
+      {#if !closing}
+        <slot name="submitText" />
+      {:else}
+        <span class:loading={closing}></span>
+      {/if}
     </button>
   </svelte:fragment>
 </Modal>

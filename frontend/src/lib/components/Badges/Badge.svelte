@@ -9,9 +9,8 @@
   export let outline = false;
 </script>
 
-<span class="badge badge-lg {type} p-4 whitespace-nowrap" class:badge-outline={outline}>
+<span class="badge badge-neutral badge-lg {type} p-4 whitespace-nowrap" class:badge-outline={outline}>
   <slot />
-
   {#if icon}
     <span class="{icon} text-lg ml-2" />
   {/if}
