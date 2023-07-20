@@ -140,7 +140,7 @@
               member={{ name: member.user.name, role: member.role }}
               canManage={canManage && (member.user.id != userId || isAdmin(user))}
             />
-            <ul class="dropdown-content menu bg-base-200 p-2 shadow rounded-box">
+            <ul class="dropdown-content menu bg-base-200 p-2 shadow rounded-box z-10">
               <li>
                 <button on:click={() => changeMemberRole(member)}>
                   <span class="i-mdi-account-lock text-2xl" />

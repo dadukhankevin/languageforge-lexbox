@@ -11,6 +11,7 @@
   {#if !loading}
     <span class="{icon} text-lg" />
   {:else}
+    <span class="{icon} text-lg" />
     <span class:loading></span>
   {/if}
 </button>
