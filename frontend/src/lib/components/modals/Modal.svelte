@@ -87,21 +87,24 @@
 
 {#if $open}
 <!-- using DaisyUI modal https://daisyui.com/components/modal/ -->
-  <dialog bind:this={dialog} class="modal-box max-w-3xl relative" class:mb-0={bottom} on:cancel={cancelModal}>
-    {#if showCloseButton}
-      <button class="btn btn-sm btn-circle absolute right-2 top-2" aria-label={$t('close')} on:click={cancelModal}
-        >✕</button>
-    {/if}
-    <slot {closing} />
-    {#if $$slots.actions}
-      <div class="modal-action justify-between">
-        <div>
-          <slot name="extraActions" />
+  <dialog bind:this={dialog} class="modal justify-items-center" class:modal-bottom={bottom} on:cancel={cancelModal}>
+    <div class="modal-box max-w-3xl">
+      {#if showCloseButton}
+        <button class="btn btn-sm btn-circle absolute right-2 top-2" aria-label={$t('close')} on:click={cancelModal}
+        >✕
+        </button>
+      {/if}
+      <slot {closing}/>
+      {#if $$slots.actions}
+        <div class="modal-action justify-between">
+          <div>
+            <slot name="extraActions"/>
+          </div>
+          <div>
+            <slot name="actions" {closing}/>
+          </div>
         </div>
-        <div>
-          <slot name="actions" {closing} />
-        </div>
-      </div>
-    {/if}
+      {/if}
+    </div>
   </dialog>
 {/if}
