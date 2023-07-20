@@ -1,5 +1,7 @@
 <script lang="ts">
-  export let icon: string;
+  // valid icons https://icon-sets.iconify.design/mdi/
+  //syntax i-mdi-<icon-name>
+  export let icon: `i-mdi-${string}`;
   export let disabled = false;
   export let loading = false;
   export let ghost = false;
@@ -9,7 +11,6 @@
   {#if !loading}
     <span class="{icon} text-lg" />
   {:else}
-  <span class:loading></span>
+    <span class:loading></span>
   {/if}
-
 </button>

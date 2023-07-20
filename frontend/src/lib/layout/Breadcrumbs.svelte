@@ -19,6 +19,7 @@
     _name: 'user_dashboard.title',
     admin: 'admin_dashboard.title',
     resetPassword: 'reset_password.title',
+    sandbox: 'Sandbox',
     project: {
       _name: null,
       create: 'project.create.title',
