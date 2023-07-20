@@ -81,6 +81,7 @@
       {#if !closing}
         <slot name="submitText" />
       {:else}
+        <slot name="submitText" />
         <span class:loading={closing}></span>
       {/if}
     </button>
